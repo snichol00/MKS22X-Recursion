@@ -34,7 +34,7 @@ public class Recursion{
   }
 
   public static int fib(int n){
-    if (n <= 0){
+    if (n <= 1){
       return n;
     }
     return fib(n-1) + fib(n-2);
@@ -50,12 +50,13 @@ public class Recursion{
     System.out.println("3.58711 = " + sqrt(12.86738, 0.00001));
     System.out.println("0 = " + sqrt(0, 0.00001));
     //makeAllSums
-    System.out.println("[0, 3, 2, 5, 1, 4, 3, 6] = " + makeAllSums(3);
-    System.out.println("[10, 9, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 1, 0] = " + makeAllSums(4);
-    System.out.println("[0, 1] = " + makeAllSums(1);
+    System.out.println("[0, 3, 2, 5, 1, 4, 3, 6] = " + makeAllSums(3));
+    System.out.println("[10, 9, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 1, 0] = " + makeAllSums(4));
+    System.out.println("[0, 1] = " + makeAllSums(1));
     //fib
     System.out.println("5 = " + fib(5));
     System.out.println("0 = " + fib(0));
     System.out.println("1 = " + fib(1));
     System.out.println("377 = " + fib(14));
+}
 }
