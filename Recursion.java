@@ -10,6 +10,21 @@ public class Recursion{
     return sqrt(n, (n / guess + guess) / 2, tolerance);
   }
 
+  public static ArrayList<Integer> makeAllSums(int n){
+    ArrayList<Integer> sums = new ArrayList<Integer>();
+    return makeSums(n, sums, sum);
+  }
+
+  public static ArrayList<Integer> makeSums(int n, ArrayList<Integer> sums, int sum){
+    if (n > 0){
+      //add sum if number n is included in sum
+      sums.add(makeSums(n-1, sums, sum + n));
+      //add sum if number n is included in sum
+      sums.add(makeSums(n-1, sums, sum));
+    }
+    return sums;
+  }
+
   public static void main(String args[]){
     System.out.println("2 = " + sqrt(4, 0.1));
     System.out.println("15 = " + sqrt(225, 0.0001));
