@@ -33,6 +33,13 @@ public class Recursion{
     return sums;
   }
 
+  public static int fib(int n){
+    if (n <= 0){
+      return n;
+    }
+    return fib(n-1) + fib(n-2);
+  }
+
   public static void main(String args[]){
     //sqrt
     System.out.println("2 = " + sqrt(4, 0.1));
@@ -41,22 +48,14 @@ public class Recursion{
     System.out.println("20044.677 = " + sqrt(401789078, 0.005));
     System.out.println("0.94528 = " + sqrt(0.89356272, 0.02376));
     System.out.println("3.58711 = " + sqrt(12.86738, 0.00001));
-
-    //testing from website
-
-    System.out.println("TESTING NEWTON'S SQUARE ROOT APPROXIMATION");
-    System.out.println("Square root of 100 is " + java.lang.Math.sqrt(100) + ". You got: " + sqrt(100, 0.001));
-    System.out.println("Square root of 0.0002 is " + java.lang.Math.sqrt(0.0002) + ". You got: " + sqrt(0.0002, 0.001));
-    System.out.println("Square root of 18947 is " + java.lang.Math.sqrt(18947) + ". You got: " + sqrt(18947, 0.001));
-    System.out.println("Square root of 8.3774 is " + java.lang.Math.sqrt(8.3774) + ". You got: " + sqrt(8.3774, 0.001));
-    System.out.println("Square root of 0 is " + java.lang.Math.sqrt(0) + ". You got: " + sqrt(0, 0.001));
-    System.out.println();
-
-
-    System.out.println("TESTING MAKEALLSUMS");
-    System.out.println("makeAllSums of 0 is [0]. You got: " + makeAllSums(0).toString());
-    System.out.println("makeAllSums of 3 is [0, 3, 2, 5, 1, 4, 3, 6]. You got: " + makeAllSums(3).toString());
-    System.out.println("makeAllSums of 4 is [10, 9, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 1, 0]. You got: " + makeAllSums(4).toString());
-    System.out.println("makeAllSums of 1 is [0, 1]. You got: " + makeAllSums(1).toString());
-  }
+    System.out.println("0 = " + sqrt(0, 0.00001));
+    //makeAllSums
+    System.out.println("[0, 3, 2, 5, 1, 4, 3, 6] = " + makeAllSums(3);
+    System.out.println("[10, 9, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 1, 0] = " + makeAllSums(4);
+    System.out.println("[0, 1] = " + makeAllSums(1);
+    //fib
+    System.out.println("5 = " + fib(5));
+    System.out.println("0 = " + fib(0));
+    System.out.println("1 = " + fib(1));
+    System.out.println("377 = " + fib(14));
 }
