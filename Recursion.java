@@ -34,11 +34,15 @@ public class Recursion{
   }
 
   public static int fib(int n){
+    return fib(n, 0, 1);
+  }
+
+  public static int fib(int n, int prev2, int prev1){
     if (n <= 1){
       return n;
     }
-    return fib(n-1) + fib(n-2);
-  }
+    return(n-1, prev2, prev1 + prev2);
+    }
 
   public static void main(String args[]){
     //sqrt
